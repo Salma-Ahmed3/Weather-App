@@ -29,4 +29,3 @@ class WeatherModel {
     );
   }
 }
-// maxTemp:  json['forecast']['forecastday']['0']['day']['maxtemp_c'],
