@@ -3,8 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_states.dart';
 import 'package:weather_app/views/home_view.dart';
-// import 'package:weather_app/views/search_view.dart';
-// import 'package:weather_app/widgets/weathwe_info_body.dart';
+
 
 void main() {
   runApp(const WeatherApp());
@@ -13,10 +12,8 @@ void main() {
 class WeatherApp extends StatelessWidget {
   const WeatherApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // 4-provide cubit
     return BlocProvider(
       create: (context) => GetWeatherCubit(),
       child: Builder(
@@ -29,11 +26,9 @@ class WeatherApp extends StatelessWidget {
                       .weatherModel
                       ?.weatherCondition,
                 ),
-                // brightness: Brightness.dark,
               ),
               home: const HomeViews(),
               debugShowCheckedModeBanner: false,
-              // home: SearchView(),
             );
           },
         ),
