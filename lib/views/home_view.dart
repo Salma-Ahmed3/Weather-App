@@ -5,8 +5,7 @@ import 'package:weather_app/cubits/get_weather_cubit/get_weather_states.dart';
 import 'package:weather_app/views/search_view.dart';
 import 'package:weather_app/widgets/no_weather_body.dart';
 import 'package:weather_app/widgets/weathwe_info_body.dart';
-// import 'package:weather_app/widgets/weathwe_info_body.dart';
-// import 'package:weather_app/widgets/weathwe_info_body.dart';
+
 
 class HomeViews extends StatefulWidget {
   const HomeViews({Key? key}) : super(key: key);
@@ -20,7 +19,6 @@ class _HomeViewsState extends State<HomeViews> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: const Color(0xff79546E),
         title: const Text('Weather App'),
         actions: [
           IconButton(
@@ -39,7 +37,6 @@ class _HomeViewsState extends State<HomeViews> {
         ],
       ),
 
-      //  5-Integrate cubit
       body: BlocBuilder<GetWeatherCubit, WeatherState>(
         builder: (context, state) {
           if (state is WeatherInitialState) {
@@ -67,17 +64,7 @@ class _HomeViewsState extends State<HomeViews> {
           }
         },
       ),
-      // body: const NoWeatherBody(),
     );
   }
 }
-
-// Cubit Pattern
-
-// -1	Create states
-// -2	Create cubit
-// -3	Create function
-// -4	Provide cubit
-// -5	Integrate cubit
-// -6	Trigger cubit
 
