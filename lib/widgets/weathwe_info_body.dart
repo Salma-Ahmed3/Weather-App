@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:weather_app/main.dart';
 import 'package:weather_app/models/weather_model.dart';
-// import 'package:weather_app/models/weather_model.dart';
 
 class WeatherInfoBody extends StatelessWidget {
   const WeatherInfoBody({Key? key, required this.weather}) : super(key: key);
@@ -18,8 +17,6 @@ class WeatherInfoBody extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
-          // Colors.orange,
-          // Colors.pink,
           getThemeColor(weatherModel.weatherCondition),
           getThemeColor(weatherModel.weatherCondition)[300]!,
           getThemeColor(weatherModel.weatherCondition)[50]!
@@ -90,51 +87,3 @@ class WeatherInfoBody extends StatelessWidget {
 }
 
 
-
-
-
-// class CustomText extends StatelessWidget {
-//   const CustomText({
-//     super.key,
-//     required this.weatherModel,
-//   });
-
-//   final WeatherModel weatherModel;
-//   @override
-//   Widget build(BuildContext context) {
-//     return Text(
-//       BlocProvider.of<GetWeatherCubit>(context).weatherModel.cityName,
-//       style: const TextStyle(
-//           fontWeight: FontWeight.bold, fontSize: 32, color: Colors.black),
-//     );
-//   }
-// }
-
-// class CustomTextWidget extends StatelessWidget {
-//   const CustomTextWidget({
-//     super.key,
-//   });
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Text(
-//       '17',
-//       style: TextStyle(
-//           fontWeight: FontWeight.bold, fontSize: 32, color: Colors.black),
-//     );
-//   }
-// }
-
-// class CustomWeatherCondetionText extends StatelessWidget {
-//   const CustomWeatherCondetionText({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Text(
-//       'Ligh Rain',
-//       style: TextStyle(
-//           fontWeight: FontWeight.bold, fontSize: 32, color: Colors.black),
-//     );
-//   }
-// }
